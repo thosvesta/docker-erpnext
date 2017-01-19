@@ -10,6 +10,6 @@ RUN wget https://raw.githubusercontent.com/frappe/bench/master/playbooks/install
 COPY setup.sh /
 RUN bash /setup.sh
 COPY all.conf /etc/supervisor/conf.d/
-EXPOSE 8085
+EXPOSE 80
 
 CMD ["/usr/bin/supervisord","-n"]
