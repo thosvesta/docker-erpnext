@@ -2,8 +2,6 @@ FROM lukptr/ubuntu:16.04-23112016
 MAINTAINER lukptr <lukptr@ridhosribumi.com>
 
 ENV FRAPPE_USER=frappe \
-    MYSQL_PASSWORD=12345678 \
-    ADMIN_PASSWORD=12345678 \
     ERPNEXT_APPS_JSON=https://raw.githubusercontent.com/frappe/bench/master/install_scripts/erpnext-apps-master.json \
     DEBIAN_FRONTEND=noninteractive
 RUN useradd $FRAPPE_USER && mkdir /home/$FRAPPE_USER && chown -R $FRAPPE_USER.$FRAPPE_USER /home/$FRAPPE_USER
